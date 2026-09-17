@@ -340,6 +340,70 @@ void LED_Pattern_2(void);
  *
  * @return None
  */
+
+void LED_Pattern_3(void);
+
+/**
+ * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
+ *
+ * This function determines the LED pattern to execute based on the given button status and switch status.
+ * It calls different pattern functions based on the switch status value.
+ *
+ * @param button_status An 8-bit unsigned integer representing the status of the user buttons. This value is used to determine
+ *                      the LED pattern in some cases.
+ * @param switch_status An 8-bit unsigned integer representing the status of the switches on the PMOD SWT. This value is used
+ *                      to select the LED pattern to execute.
+ *
+ * @return None
+ */
+
+void LED_Pattern_4(void);
+
+/**
+ * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
+ *
+ * This function determines the LED pattern to execute based on the given button status and switch status.
+ * It calls different pattern functions based on the switch status value.
+ *
+ * @param button_status An 8-bit unsigned integer representing the status of the user buttons. This value is used to determine
+ *                      the LED pattern in some cases.
+ * @param switch_status An 8-bit unsigned integer representing the status of the switches on the PMOD SWT. This value is used
+ *                      to select the LED pattern to execute.
+ *
+ * @return None
+ */
+
+void LED_Pattern_5(void);
+
+/**
+ * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
+ *
+ * This function determines the LED pattern to execute based on the given button status and switch status.
+ * It calls different pattern functions based on the switch status value.
+ *
+ * @param button_status An 8-bit unsigned integer representing the status of the user buttons. This value is used to determine
+ *                      the LED pattern in some cases.
+ * @param switch_status An 8-bit unsigned integer representing the status of the switches on the PMOD SWT. This value is used
+ *                      to select the LED pattern to execute.
+ *
+ * @return None
+ */
+
+void Johnson_Counter(void);
+
+/**
+ * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
+ *
+ * This function determines the LED pattern to execute based on the given button status and switch status.
+ * It calls different pattern functions based on the switch status value.
+ *
+ * @param button_status An 8-bit unsigned integer representing the status of the user buttons. This value is used to determine
+ *                      the LED pattern in some cases.
+ * @param switch_status An 8-bit unsigned integer representing the status of the switches on the PMOD SWT. This value is used
+ *                      to select the LED pattern to execute.
+ *
+ * @return None
+ */
 void LED_Controller(uint8_t button_status, uint8_t switch_status);
 
 #endif /* INC_GPIO_H_ */
