@@ -1,10 +1,25 @@
 # Overview
 
-Project enables displaying an array of LED light patterns depending on inputs of two buttons nd four switches.
+Project enables displaying an array of LED light patterns depending on inputs of two buttons and four switches.
 
-### LED pattern 1 
+### LED pattern 1 (one of four cases hown here)
 
-## LED pattern 2
+			int led1_i = 0x01;
+			int led2_i = 0x02;
+			PMOD_8LD_Output(PMOD_8LD_ALL_OFF);
+			while(Get_Buttons_Status() == 0x00)
+			{
+
+				LED1_Output(led1_i);
+				LED2_Output(led2_i);
+				led1_i ^= 0x01;
+				led2_i ^= 0x02;
+				Clock_Delay1ms(1000);
+
+			}
+			break;
+
+### LED pattern 2 Binary Up Counter
 
 			for (int led_count = 0; led_count <= 0xFF; led_count++)
 			{
@@ -18,7 +33,7 @@ Project enables displaying an array of LED light patterns depending on inputs of
 			}
 
 
-### LED pattern 3
+### LED pattern 3 Binary Down Counter
 
 			for (int led_count = 0xFF; led_count >= 0x00; led_count--)
 			{
@@ -31,7 +46,7 @@ Project enables displaying an array of LED light patterns depending on inputs of
 				}
 			}
 
-### LED pattern 4
+### LED pattern 4 Ring Counter Left
 
 			for (int led_count = 0x01; led_count <= 0x80; led_count <<= 1)
 			{
@@ -44,7 +59,7 @@ Project enables displaying an array of LED light patterns depending on inputs of
 				}
 			}
 
-### LED pattern 5
+### LED pattern 5 Ring Counter Right
 
 			for (int led_count = 0x80; led_count >= 0x01; led_count >>= 1)
 			{
@@ -57,7 +72,7 @@ Project enables displaying an array of LED light patterns depending on inputs of
 				}
 			}
 
-### LED pattern 6 Jonson counter
+### LED pattern 6 Johnson counter
 
 			for (int i = 0x00; i <= 0x0F; i++)
 			{
@@ -82,7 +97,13 @@ Project enables displaying an array of LED light patterns depending on inputs of
 * PMOD 8LD (8 LEDs) - [Product Link](https://digilent.com/shop/pmod-8ld-eight-high-brightness-leds/)
 
 # Known Issues or Limitations:
+Originally for the pattern one snippet we used "while(button_status == 0x00)" but that caused the main while loop to never advance and never update button_status
+so we used the read function directly "while(Get_Buttons_Status() == 0x00)".
 
 # Author Contribution:
-
+| Sam  | Omer |
+| ------------- | ------------- |
+| led pattern 1  | led pattern 3  |
+| led pattern 6 | led pattern 4  |
+|  | led pattern 5  |
 # References:
