@@ -19,19 +19,6 @@ Project enables displaying an array of LED light patterns depending on inputs of
 			}
 			break;
 
-### LED pattern 2 Binary Up Counter
-
-			for (int led_count = 0; led_count <= 0xFF; led_count++)
-			{
-				PMOD_8LD_Output(led_count);
-				Clock_Delay1ms(100);
-				uint8_t switch_status = Get_PMOD_SWT_Status();
-				if (switch_status != 0x01)
-				{
-					break;
-				}
-			}
-
 
 ### LED pattern 3 Binary Down Counter
 
