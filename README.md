@@ -94,3 +94,11 @@ so we used the read function directly "while(Get_Buttons_Status() == 0x00)".
 | led pattern 6 | led pattern 4  |
 |  | led pattern 5  |
 # References:
+
+1. [MSP432P401R SimpleLink Microcontroller LaunchPad Development Kit User's Guide](https://docs.rs-online.com/3934/A700000006811369.pdf)
+2. [MSP432P401R Datasheet](https://www.ti.com/lit/ds/slas826e/slas826e.pdf)
+3. [Robot Systems Learning Kit (TI-RSLK) User Guide](https://www.ti.com/lit/pdf/sekp166)
+4. [MSP432P4xx SimpleLink Microcontrollers Technical Reference Manual](https://web.archive.org/web/20200402132841/http:/www.ti.com/lit/ug/slau356i/slau356i.pdf)
+5. [PMOD SWT Reference Manual](https://digilent.com/reference/pmod/pmodswt/reference-manual)
+6. [PMOD LED Reference Manual](https://reference.digilentinc.com/reference/pmod/pmodled/reference-manual)
+7. [PMOD 8LD Reference Manual](https://digilent.com/reference/pmod/pmod8ld/reference-manual)
